@@ -26,6 +26,15 @@ pv = gets.chomp.to_f
 #   For each option, tell the user how much the monthly payment will be to that bank.
 #   Re-use the pmt method that you defined in Challenge 1.
 
-# ====================
-# Your code goes here.
-# ====================
+
+x = loan_quotes[0]
+y = loan_quotes[1]
+z = loan_quotes[2]
+
+option = [x, y, z]
+
+option.each do |bank|
+  int = "#{bank["rate"]}".to_f
+  puts "For #{bank["bank"]}, your monthly payment would be $#{pmt(int, nper, pv)}."
+end
+
