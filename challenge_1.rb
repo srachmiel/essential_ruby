@@ -15,6 +15,9 @@
 
 def pmt(interest_rate, number_of_payments, present_value)
 	
+	(interest_rate * present_value) / (1 - ((1 + interest_rate)**(-1 * number_of_payments)))
+	
 end
 
-puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
+puts "Your monthly payment will be $#{pmt(0.01, 60, 30000)}."  
+# Where for pmt(x,y,z): x = monthly interest rate expressed as decimal, y = number of monthly payments, and z = loan's principal
