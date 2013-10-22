@@ -15,7 +15,7 @@
 
 def pmt(interest_rate, number_of_payments, present_value)
 	
-	(interest_rate * present_value) / (1 - ((1 + interest_rate)**(-1 * number_of_payments)))
+	((interest_rate * present_value) / (1 - ((1 + interest_rate)**(-1 * number_of_payments)))).round(2)
 	
 end
 
